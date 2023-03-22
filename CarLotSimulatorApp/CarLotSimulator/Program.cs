@@ -18,7 +18,7 @@ namespace CarLotSimulator
             //Now that the Car class is created we can instanciate 3 new cars
 
             var parkingLot = new CarLot();
-
+            Console.WriteLine($"Number of cars in the lot: {CarLot.numOfCars}\n");
             //Car mySecondCar = new Car();
             //Car myThirdCar = new Car();
 
@@ -31,12 +31,21 @@ namespace CarLotSimulator
             myFirstCar.IsDriveable = false;
             myFirstCar.EngineNoise = "bzz";
             myFirstCar.HonkNoise = "beep";
+
+            parkingLot.ListOfCars = new List<Car>();
             parkingLot.ListOfCars.Add(myFirstCar);
+
+            CarLot.numOfCars++;
+            Console.WriteLine($"Number of cars in the lot: {CarLot.numOfCars}\n");
+
 
             // Initializing and setting properties for second object (Object Initializer Syntax)
 
             var mySecondCar = new Car() { Year = 2012, Make = "Chevy", Model = "Cruze", IsDriveable = false, EngineNoise = "brr", HonkNoise = "baep" };
             parkingLot.ListOfCars.Add(mySecondCar);
+
+            CarLot.numOfCars++;
+            Console.WriteLine($"Number of cars in the lot: {CarLot.numOfCars}\n");
 
             // Third way to initialize object and set properties (Custom Constructors)
 
@@ -48,6 +57,9 @@ namespace CarLotSimulator
                 "BRRRR",
                 "BAAP");
             parkingLot.ListOfCars.Add(myThirdCar);
+
+            CarLot.numOfCars++;
+            Console.WriteLine($"Number of cars in the lot: {CarLot.numOfCars}\n");
 
             //Call each of the methods for each car
 

@@ -11,15 +11,18 @@ namespace CarLotSimulator
     {
 
         public CarLot()
-        {
+        { 
         }
 
-        public List<Car> ListOfCars { get; set; } = new List<Car>();
+        public CarLot(List<Car> listOfCars)
+        {
+            ListOfCars = listOfCars;
+        }
 
-        //public List<string> Add()
-        //{
-        //    return ListOfCars.Add(Car);
-        //}
+        public static int numOfCars; // field
+
+        public List<Car> ListOfCars { get; set; } //= new List<Car>();
+
     }
 }
             

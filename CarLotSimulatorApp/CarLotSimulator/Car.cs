@@ -8,9 +8,12 @@ namespace CarLotSimulator
         //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
         //The methods should take one string parameter: the respective noise property
 
-		public Car()
+        // default constructor
+        public Car()
 		{
-		}
+            //CarLot.numOfCars++;
+            //Console.WriteLine($"Number of cars in the lot: {CarLot.numOfCars}\n");
+        }
 
         //Custom Constructor
         public Car(int year, string make, string model, bool driveable, string engineNoise, string honkNoise)
